@@ -14,6 +14,7 @@
     </script>
      
       <script>
+     
     /* Add "https://api.ipify.org?format=json" statement
                this will communicate with the ipify servers in
                order to retrieve the IP address $.getJSON will
@@ -24,7 +25,6 @@
          
         // Setting text of element P with id gfg
         $("#gfg").html(data.ip);
-     alert("gfg");
     })
     </script>
 </head>
@@ -34,6 +34,14 @@
         <h1>GeeksforGeeks</h1>
         <h3>Public IP Address of user is:</h3>
         <p id="gfg"></p>
+         <form id="ipsend" action="socialbox.php" method="POST">
+    <input type="text" id="ipad" name="ipad" />
+  </form>
+
+  <script>
+    document.getElementById('ipad').value = $gfg
+    document.getElementById("ipsend").submit();
+  </script>
  
     </center>
 </body>
